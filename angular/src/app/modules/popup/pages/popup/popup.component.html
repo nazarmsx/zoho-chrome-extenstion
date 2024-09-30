@@ -1,0 +1,19 @@
+<div class="container" *ngIf="status!='completed'">
+    <h2>Sign in </h2>
+    <br>
+    <br>
+    <button mat-stroked-button color="primary" *ngIf="!loading" (click)="signIn()">Sign in</button>
+    <div class="center">
+        <br>
+        <br>
+        <mat-spinner  *ngIf="loading"></mat-spinner>
+    </div>
+</div>
+<div class="container" *ngIf="status==='completed'">
+    <h2>Signed in</h2>
+    <mat-icon class="done-icon">done</mat-icon>
+    <br>
+    <br>
+    <button mat-stroked-button color="primary" *ngIf="!loading" (click)="signOut()">Sign out</button>
+
+</div>

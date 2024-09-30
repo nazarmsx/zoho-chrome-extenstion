@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "zoho-extension",
+  "short_name": "zoho-extension",
+  "version": "1.0.0",
+  "description": "Polytech Software Djinni-Zoho integration",
+  "permissions": [
+    "tabs",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_popup": "index.html?#/popup",
+    "default_title": "Polytech Software Djinni-Zoho integration"
+  },
+  "options_page": "index.html?#/options",
+  "content_scripts": [
+    {
+      "js": [
+        "contentPage.js"
+      ],
+      "css" : ["assets/toatsr.css"],
+      "matches": [
+        "https://djinni.co/home/inbox",
+        "https://djinni.co/home/inbox/*"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "backgroundPage.js"
+    ],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

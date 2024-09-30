@@ -1,0 +1,119 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$my-primary: (
+        50 : #265ef5,
+        100 : #265ef5,
+        200 : #265ef5,
+        300 : #265ef5,
+        400 : #265ef5,
+        500 : #265ef5,
+        600 : #265ef5,
+        700 : #265ef5,
+        800 : #265ef5,
+        900 : #265ef5,
+        A100 : #265ef5,
+        A200 : #265ef5,
+        A400 : #265ef5,
+        A700 : #265ef5,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$my-accent: (
+        50 : #ffc107,
+        100 : #ffc107,
+        200 : #ffc107,
+        300 : #ffc107,
+        400 : #ffc107,
+        500 : #ffc107,
+        600 : #ffc107,
+        700 : #ffc107,
+        800 : #ffc107,
+        900 : #ffc107,
+        A100 : #ffc107,
+        A200 : #ffc107,
+        A400 : #ffc107,
+        A700 : #ffc107,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #000000,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$my-warn: (
+        50 : #eb3357,
+        100 : #eb3357,
+        200 : #eb3357,
+        300 : #eb3357,
+        400 : #eb3357,
+        500 : #eb3357,
+        600 : #eb3357,
+        700 : #eb3357,
+        800 : #eb3357,
+        900 : #eb3357,
+        A100 : #eb3357,
+        A200 : #eb3357,
+        A400 : #eb3357,
+        A700 : #eb3357,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #000000,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$my-theme-primary: mat-palette($my-primary);
+$my-theme-accent: mat-palette($my-accent);
+$my-theme-warn: mat-palette($my-warn);
+$my-theme: mat-light-theme(
+                $my-theme-primary,
+                $my-theme-accent,
+                $my-theme-warn
+);
+
+@include angular-material-theme($my-theme);
+
+@include mat-datepicker-theme($my-theme);
+
+.mat-focused .mat-form-field-required-marker{
+  color: black;
+}
